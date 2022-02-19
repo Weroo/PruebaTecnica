@@ -9,7 +9,7 @@
         </div>
         <div class="row justify-content-center my-2 py-2">
             <div class="col-md-8 text-center">
-                <h2>Editar publicación</h2>
+                <h2><strong>Editar publicación</strong></h2>
             </div>
         </div>
         <div class="my-2 py-2">
@@ -36,8 +36,8 @@
                 </div>
                 <div class="form-group">
                     <div class="mt-5 text-center d-flex justify-content-around">
-                        <a class="btn btn-outline-dark" href="{{ route('home') }}">Cancelar</a>
-                        <button type="submit" class="btn btn-outline-dark">Publicar</button>
+                        <a class="btn btn-outline-secondary" href="{{ route('home') }}">Cancelar</a>
+                        <button type="submit" class="btn btn-outline-success">Publicar</button>
                     </div>
                 </div>
             </form>

@@ -5,13 +5,13 @@
             <p class="my-1">{{$content}}</p>
         </div>
         <div class="d-flex align-items-center">
-            <button type="button" class="mx-2 btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#deleteCommentModal{{$id}}">Eliminar comentario</button>
+            <button type="button" class="mx-2 btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#deleteCommentModal{{$id}}">Eliminar comentario</button>
 
             <div class="modal fade" id="deleteCommentModal{{$id}}" tab-index="-1" role="dialog" aria-labelledby="deleteCommentModal{{$id}}Label" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="deleteCommentModal{{$id}}Label">Eliminar comentario</h5>
+                            <h5 class="modal-title" id="deleteCommentModal{{$id}}Label"><strong>Eliminar comentario</strong></h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -24,7 +24,7 @@
                             <form method="POST" action="{{ route('comments.destroy', $id) }}">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-danger">
                                     Si
                                 </button>
                             </form>
@@ -33,7 +33,7 @@
                 </div>
             </div>
 
-            <button type="button" class="mx-2 btn btn-outline-dark btn-sm" data-toggle="collapse" data-target="#responseCollapse{{$id}}" aria-expanded="false" aria-controls="responseCollapse{{$id}}">
+            <button type="button" class="mx-2 btn btn-outline-primary btn-sm" data-toggle="collapse" data-target="#responseCollapse{{$id}}" aria-expanded="false" aria-controls="responseCollapse{{$id}}">
                 Responder
             </button>
         </div>

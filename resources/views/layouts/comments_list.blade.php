@@ -1,5 +1,5 @@
 <div class="my-3">
-    <h4>Comentarios</h4>
+    <h4><strong>Comentarios</strong></h4>
     <div class="my-3">
         @if ($comments->isEmpty())
             <div class="text-center">

@@ -18,7 +18,7 @@
         </div>
         <div class="form-group">
             <div class="mt-4">
-                <button type="submit" class="btn btn-outline-dark">Enviar respuesta</button>
+                <button type="submit" class="btn btn-outline-success">Enviar respuesta</button>
             </div>
         </div>
     </form>
