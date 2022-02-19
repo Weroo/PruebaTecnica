@@ -13,10 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Pagina raiz redirige a pagina de inicio de publicaciones
+Route::get('/', [App\Http\Controllers\PublicationController::class, 'index'])->name('home');
 
-Auth::routes();
+// Recurso para acciones de publicaciones
+Route::resource('publications', PublicationController::class);
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Recurso para acciones de comentarios
+Route::resource('comments', CommentController::class);
+
+// Recurso para acciones de comentarios anidados
+Route::resource('nested_comments', NestedCommentController::class);
+
+//Route::get('/home', 'HomeController@index')->name('home');

@@ -37634,6 +37634,8 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
+__webpack_require__(/*! ./tools */ "./resources/js/tools.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -37678,6 +37680,27 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/tools.js":
+/*!*******************************!*\
+  !*** ./resources/js/tools.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var cleanFormButton = document.getElementById('clean-form');
+  var authorField = document.getElementById('author');
+  var titleField = document.getElementById('title');
+  var bodyField = document.getElementById('body');
+  cleanFormButton.addEventListener('click', function () {
+    authorField.value = '';
+    titleField.value = '';
+    bodyField.value = '';
+  });
+});
 
 /***/ }),
 
